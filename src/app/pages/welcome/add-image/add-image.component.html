@@ -1,0 +1,47 @@
+<!-- <form nz-form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="email">Account Name</nz-form-label>
+      <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid E-mail!">
+        <input nz-input formControlName="accountName"  />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="password" nzRequired>Accoun Number</nz-form-label>
+      <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input your password!">
+        <input
+          nz-input
+          formControlName="accountNumber"
+        />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-row class="register-area">
+      <nz-form-control [nzSpan]="14" [nzOffset]="6">
+        <button nz-button nzType="primary">Lưu</button>
+        <button nz-button routerLink="/welcome/image">Quay lại</button>
+      </nz-form-control>
+  
+    </nz-form-item>
+  
+  
+  </form> -->
+
+
+<form name="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" name="title" [(ngModel)]="form.title" required />
+    </div>
+    <div class="form-group">
+        <label for="url">Url</label>
+        <input type="text" class="form-control" name="url" [(ngModel)]="form.url" required />
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary btn-block">
+            Lưu
+        </button>
+        <button routerLink = "/welcome/image" class="btn btn-primary btn-block">
+            Quay lại
+        </button>
+    </div>
+
+</form>

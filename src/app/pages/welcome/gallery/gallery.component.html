@@ -1,0 +1,38 @@
+<!-- <nz-table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Url</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of images">
+            <td>{{ data.id }}</td>
+            <td>{{ data.name }}</td>
+            <td>{{ data.url}}</td>
+            <td>
+                <a>Action 一 {{ data.id }}</a>
+                <nz-divider nzType="vertical"></nz-divider>
+                <a routerLink="/welcome/accounts/{{gallery.images[0].id}}">Edit</a>
+                <nz-divider nzType="vertical"></nz-divider>
+                <a (click)="deleteAccount(data.id)">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</nz-table> -->
+<table class="table table-striped table-hover">
+    <thead>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Url</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let image of images">
+            <td>{{ image.id }}</td>
+            <td>{{ image.title }}</td>
+            <td>{{ image.url }}</td>
+        </tr>
+    </tbody>
+</table>
